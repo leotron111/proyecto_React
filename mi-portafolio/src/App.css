@@ -1,0 +1,39 @@
+/* Estilos generales */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0e0e10;
+  color: #f5f3ef;
+  transition: all 1s ease;
+}
+
+/* Estilos básicos para las secciones */
+#home, #sobre-mi, #proyectos {
+  padding: 100px 20px;
+  min-height: 100vh; /* Asegura que cada sección ocupe al menos la altura completa de la pantalla */
+  margin: 0;
+  opacity: 1; /* Las secciones estarán visibles desde el principio */
+  transform: translateY(0); /* Comienza en su posición original */
+  transition: opacity 1s ease, transform 1s ease; /* Transición suave */
+}
+
+/* Ajustar el espacio entre las secciones */
+
+/* Agregar aún más espacio debajo de la sección "SobreMi" */
+#sobre-mi {
+  margin-top: 0; /* Asegura que SobreMi esté directamente debajo de Frase */
+  margin-bottom: 350px; /* Aumentamos aún más el espacio debajo de SobreMi */
+}
+
+/* Agregar aún más espacio encima de la sección "Proyectos" */
+#proyectos {
+  margin-top: 200px; /* Aumentamos aún más el espacio arriba de la sección Proyectos */
+}
+
+/* Cuando la clase 'visible' se activa, se aplica la animación */
+.texto-animado.visible {
+  opacity: 0; /* Desaparece */
+  transform: translateY(-50px); /* Se mueve hacia arriba */
+}

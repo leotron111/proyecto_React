@@ -1,0 +1,111 @@
+/* Sección de la frase inspiradora */
+.frase {
+  position: relative;  /* Cambiado de fixed a relative */
+  top: 10px; /* Coloca la sección al inicio */
+  left: 0;
+  width: 100%;  /* Ocupar todo el ancho */
+  height: auto; /* Cambiado para que ocupe solo el contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+  text-align: center;
+  background: #0e0e10; /* Color de fondo oscuro */
+  color: #f5f3ef; /* Texto claro */
+  box-sizing: border-box;
+  padding: 60px 20px; /* Añadir algo de espacio */
+}
+
+#home {
+  margin-top: 0;
+}
+
+
+/* Subtítulo pequeño */
+.frase-subtitulo {
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #d3cbb8;
+  margin-bottom: 15px;
+}
+
+/* Título principal */
+.frase-titulo {
+  font-size: 8vw;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.frase-titulo span {
+  font-weight: 700;
+  color: #f1e8d8;
+}
+
+/* Descripción secundaria */
+.frase-descripcion {
+  font-size: 4vw;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.2;
+  color: #f5f3ef;
+}
+
+/* Estilos específicos para palabras */
+.frase-descripcion .italic {
+  font-style: italic;
+  font-size: 3vw;
+  color: #bbb;
+}
+
+.frase-descripcion .bold {
+  font-weight: 700;
+  font-size: 4.2vw;
+  color: #f1e8d8;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .frase-subtitulo {
+    font-size: 1.4rem;
+  }
+
+  .frase-titulo {
+    font-size: 10vw;
+  }
+
+  .frase-descripcion {
+    font-size: 5vw;
+  }
+
+  .frase-descripcion .italic {
+    font-size: 3.8vw;
+  }
+
+  .frase-descripcion .bold {
+    font-size: 5.5vw;
+  }
+}
+
+/* Responsividad para pantallas grandes */
+@media (min-width: 1200px) {
+  .frase-titulo {
+    font-size: 7rem;
+  }
+
+  .frase-descripcion {
+    font-size: 3rem;
+  }
+
+  .frase-descripcion .italic {
+    font-size: 2rem;
+  }
+
+  .frase-descripcion .bold {
+    font-size: 3.5rem;
+  }
+}

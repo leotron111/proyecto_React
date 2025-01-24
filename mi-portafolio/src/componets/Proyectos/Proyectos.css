@@ -1,0 +1,143 @@
+/* Sección de proyectos */
+.proyectos {
+  position: relative;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #0e0e10;
+  color: #f5f3ef;
+  box-sizing: border-box;
+  padding: 60px 20px;
+}
+
+/* Subtítulo pequeño */
+.proyectos-subtitulo {
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #d3cbb8;
+  margin-bottom: 15px;
+}
+
+/* Título principal */
+.proyectos-titulo {
+  font-size: 8vw;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.proyectos-titulo span {
+  font-weight: 700;
+  color: #f1e8d8;
+}
+
+/* Contenedor de proyectos como enlace sin cambiar estilos */
+.proyecto-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 50px 0;
+  padding: 20px;
+  border: 1px solid #f5f3ef;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  text-decoration: none; /* Eliminar subrayado del enlace */
+  color: inherit; /* Mantener el color original */
+  transition: transform 0.3s ease, filter 300ms ease; /* Animación suave */
+}
+
+/* Animación al pasar el mouse como el logo */
+.proyecto-container:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 1em #f1e8d880);
+}
+
+/* Proyecto a la izquierda */
+.izquierda {
+  align-self: flex-start;
+  text-align: left;
+}
+
+/* Proyecto a la derecha */
+.derecha {
+  align-self: flex-end;
+  text-align: right;
+}
+
+/* Contenido del proyecto */
+.proyecto-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.proyecto-contenido.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Tarjeta del proyecto */
+.proyecto-card {
+  flex: 1;
+  max-width: 50%;
+}
+
+/* Imagen del proyecto */
+.proyecto-imagen {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Descripción del proyecto */
+.proyecto-descripcion {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #f5f3ef;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .proyectos-subtitulo {
+    font-size: 1.4rem;
+  }
+
+  .proyectos-titulo {
+    font-size: 10vw;
+  }
+
+  .proyecto-contenido {
+    flex-direction: column;
+  }
+
+  .proyecto-card {
+    max-width: 100%;
+  }
+
+  .proyecto-descripcion {
+    font-size: 1rem;
+  }
+}
+
+/* Responsividad para pantallas grandes */
+@media (min-width: 1200px) {
+  .proyectos-titulo {
+    font-size: 7rem;
+  }
+
+  .proyecto-descripcion {
+    font-size: 1.5rem;
+  }
+}

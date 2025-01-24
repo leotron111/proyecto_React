@@ -1,0 +1,140 @@
+/* Estilo general de la sección */
+.contactame {
+  background-color: #0e0e10; /* Fondo oscuro */
+  color: #f5f3ef; /* Texto claro */
+  text-align: center;
+  padding: 100px 20px;
+  font-family: 'Times New Roman', serif;
+}
+
+/* Texto con diferentes estilos */
+.contactame-texto {
+  font-size: 5vw;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.contactame-texto .italic {
+  font-style: italic;
+}
+
+.contactame-texto .bold {
+  font-weight: 700;
+}
+
+.contactame-texto .huge {
+  font-size: 10vw;
+  font-weight: 600;
+}
+
+.contactame-texto .small {
+  font-size: 1.8rem;
+  font-style: italic;
+  color: #bbb;
+}
+
+/* Contenedor del botón de contacto */
+.contactame-boton-container {
+  position: relative;
+  margin-top: 40px;
+}
+
+/* Botón de contacto */
+.contactame-boton {
+  padding: 15px 40px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #0e0e10;
+  background-color: #f5f3ef;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contactame-boton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Menú desplegable */
+.contactame-menu {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1c1c1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+}
+
+/* Estilo de los elementos del menú */
+.contactame-item {
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  color: #f5f3ef;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.contactame-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Iconos dentro del menú */
+.contactame-item svg {
+  font-size: 1.5rem;
+  color: #61dafb;
+}
+
+/* Punto decorativo debajo del botón */
+.contactame-boton-container::after {
+  content: "•";
+  display: block;
+  font-size: 2rem;
+  color: #f5f3ef;
+  margin-top: 10px;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contactame-texto {
+    font-size: 8vw;
+  }
+
+  .contactame-texto .huge {
+    font-size: 12vw;
+  }
+
+  .contactame-boton {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+  }
+
+  .contactame-menu {
+    min-width: 200px;
+  }
+
+  .contactame-item {
+    font-size: 1rem;
+  }
+}
+
+/* Responsividad para pantallas grandes */
+@media (min-width: 1200px) {
+  .contactame-texto {
+    font-size: 7rem;
+  }
+
+  .contactame-boton {
+    font-size: 1.6rem;
+  }
+}

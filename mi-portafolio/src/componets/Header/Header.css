@@ -1,0 +1,128 @@
+/* Estilos generales para el header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0e0e108f;  /* Fondo oscuro */
+  padding: 15px 40px;   /* Padding más delgado */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+/* Contenedor del header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilo del logo fino */
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  color: #f5f3ef;
+  font-weight: 300;  /* Fuente más delgada */
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.logo-img {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
+.menu-btn {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 35px;
+  border-radius: 50%;
+  border: 5px solid #7a7979;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background-color: transparent;
+}
+
+.menu-btn:hover {
+  transform: scale(1.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-btn span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: #f5f3ef;
+  transition: all 0.3s ease;
+}
+
+.menu-btn:hover span {
+  background: #61dafb;
+}
+
+/* Estilos del menú overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.973);
+  transition: right 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay.open {
+  right: 0;
+}
+
+/* Botón de cierre del menú */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 2.2rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Lista de enlaces del menú */
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.overlay ul li {
+  margin: 15px 0;
+}
+
+.overlay ul li a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  color: #f5f3ef;
+  text-decoration: none;
+  font-weight: 200;
+  transition: color 0.3s ease-in-out;
+}
+
+.overlay ul li a:hover {
+  color: #61dafb;
+}
